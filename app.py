@@ -78,7 +78,7 @@ with st.sidebar:
     st.header("About This Project")
     st.info("This dashboard uses NLP to analyze sentiment from social media. It features a demo with a static dataset and a live analysis mode using the Reddit API.")
     st.write("Created by: **Syed Moin Uddin**")
-    st.write("[View on GitHub](https://github.com/your-username/your-repo-name)")
+    st.write("[View on GitHub](https://github.com/imSyedMoinUddin/Sentiment-Analysis-Dashboard)")
 
 # --- Main Panel ---
 st.title("📊 Social Media Sentiment Analysis")
