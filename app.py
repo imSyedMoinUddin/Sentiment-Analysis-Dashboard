@@ -106,7 +106,7 @@ with st.sidebar:
         "It features a demo with a static dataset and a live analysis mode using the Reddit API."
     )
     st.write("Created by: **Syed Moin Uddin**")
-    st.write("[View on GitHub](https://github.com/your-username/your-repo-name)") # Remember to change this link
+    st.write("[View on GitHub](https://github.com/imSyedMoinUddin/Sentiment-Analysis-Dashboard)")
 
 # --- Header Section ---
 st.title("📊 Social Media Sentiment Analysis")
