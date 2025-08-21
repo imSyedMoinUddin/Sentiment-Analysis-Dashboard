@@ -1,8 +1,10 @@
+# app.py
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-import praw # The Python Reddit API Wrapper
+import praw
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -74,9 +76,9 @@ with st.sidebar:
         num_comments = st.slider("Number of Comments to Analyze:", min_value=25, max_value=500, value=50, step=25)
     st.divider()
     st.header("About This Project")
-    st.info("This dashboard uses NLP to analyze sentiment from social media. It features a demo with a static dataset and a live analysis mode using the Reddit API.")
+    st.info("An NLP dashboard for real-time sentiment analysis of social media data.")
     st.write("Created by: **Syed Moin Uddin**")
-    st.write("[View on GitHub](https://github.com/imSyedMoinUddin/Sentiment-Analysis-Dashboard)")
+    st.write("[View on GitHub](https://github.com/your-username/your-repo-name)")
 
 # --- Main Panel ---
 st.title("📊 Social Media Sentiment Analysis")
@@ -105,7 +107,7 @@ elif app_mode == "Airline Tweet Demo":
 # --- Live Reddit Analysis ---
 elif app_mode == "Live Reddit Analysis":
     st.header("Live Subreddit Sentiment Analysis")
-    subreddit_name = st.text_input("Enter a subreddit name (e.g., technology, gaming, python):", "python")
+    subreddit_name = st.text_input("Enter a subreddit name:", "python")
     analyze_button = st.button("Analyze Subreddit")
     if analyze_button:
         with st.spinner(f"Fetching {num_comments} comments from r/{subreddit_name}..."):
@@ -139,7 +141,7 @@ if not filtered_df.empty:
     st.subheader("Explore the Raw Data")
     with st.expander("Click to view individual posts and their scores"):
         
-        # --- Create a display-ready DataFrame with a 1-based index ---
+        # --- THE FIX: Create a display-ready DataFrame with a 1-based index ---
         df_display = filtered_df[['text', 'vader_score', 'vader_sentiment']].copy()
         df_display.index = range(1, len(df_display) + 1) # Set index to start from 1
         
