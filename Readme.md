@@ -2,7 +2,7 @@
 
 An interactive web application that analyzes public sentiment from social media in real-time. This project demonstrates skills in Natural Language Processing (NLP), data visualization, and building full-stack web applications with Python.
 
-**Live Application URL:** [**Click here to view the live dashboard!**](https://your-streamlit-app-url.streamlit.app/)
+**Live Application URL:** [**Click here to view the live dashboard!**](https://sentiment-dashboard-syed.streamlit.app/)
 
 ---
 
