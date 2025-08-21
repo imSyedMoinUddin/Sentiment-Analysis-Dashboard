@@ -76,7 +76,7 @@ with st.sidebar:
         num_comments = st.slider("Number of Comments to Analyze:", min_value=25, max_value=500, value=50, step=25)
     st.divider()
     st.header("About This Project")
-    st.info("An NLP dashboard for real-time sentiment analysis of social media data.")
+    st.info("This dashboard uses NLP to analyze sentiment from social media. It features a demo with a static dataset and a live analysis mode using the Reddit API.")
     st.write("Created by: **Syed Moin Uddin**")
     st.write("[View on GitHub](https://github.com/your-username/your-repo-name)")
 
