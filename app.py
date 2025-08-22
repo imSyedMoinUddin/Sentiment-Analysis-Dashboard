@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-import praw
+import praw # The Python Reddit API Wrapper
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -139,7 +139,7 @@ if not filtered_df.empty:
     st.subheader("Explore the Raw Data")
     with st.expander("Click to view individual posts and their scores"):
         
-        # --- THE FIX: Create a display-ready DataFrame with a 1-based index ---
+        # --- Create a display-ready DataFrame with a 1-based index ---
         df_display = filtered_df[['text', 'vader_score', 'vader_sentiment']].copy()
         df_display.index = range(1, len(df_display) + 1) # Set index to start from 1
         
